@@ -2,6 +2,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from .config import Config
 
+#Inicializa la base de datos
 db = SQLAlchemy()
 
 def create_app():
@@ -12,5 +13,8 @@ def create_app():
 
     from .routes import bp as main_bp
     app.register_blueprint(main_bp)
+
+    with app.app_context():
+        db.create_all()
 
     return app

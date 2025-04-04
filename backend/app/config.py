@@ -1,6 +1,6 @@
 import os
 
-#Especifico la ruta donde se guardara el archivo de la base de datos
+#Especifico la ruta donde se almacenara el archivo con la db y el motor a usar - SQLITE
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config:
