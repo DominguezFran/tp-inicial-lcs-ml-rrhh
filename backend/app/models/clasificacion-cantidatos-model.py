@@ -12,7 +12,6 @@ df = pd.read_excel(file_path)
 #No agregamos expectativa salarial hasta corregir imperfecciones
 df = df.drop(columns=['id_candidato', 'nombre', 'expectativa_salarial'])
 
-
 nivel_educativo_mapping = {'secundario': 0, 'terciario': 1, 'universitario': 2}
 df['nivel_educativo'] = df['nivel_educativo'].map(nivel_educativo_mapping)
 
