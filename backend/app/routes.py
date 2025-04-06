@@ -24,3 +24,4 @@ def agregar_candidato():
     db.session.add(nuevo_candidato)
     db.session.commit()
     return jsonify({"mensaje": "Candidato agregado"}), 201
+
